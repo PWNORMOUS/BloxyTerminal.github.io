@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloxy Terminal</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-controls">
+                <span class="control close"></span>
+                <span class="control minimize"></span>
+                <span class="control maximize"></span>
+            </div>
+            <div class="terminal-title">user@BloxyTerminal:~$</div>
+        </div>
+
+        <div class="terminal-body">
+            <!-- Main directory listing -->
+            <div id="main" class="section active">
+                <div class="prompt">
+                    <span class="user">guest@BloxyTerminal</span><span class="separator">:</span><span class="path">~</span><span class="dollar">$</span> ls -la posts/
+                </div>
+
+                <div class="output">
+                    <div class="file-listing">
+                        <div class="file">
+                            <a href="#" onclick="showPost('post1')" class="file-link">-rw-r--r-- 1 user user 1024 Dec 15 10:30 <span class="filename">Grow A Garden.md</span></a>
+                        </div>
+                        <div class="file">
+                            <a href="#" onclick="showPost('post2')" class="file-link">-rw-r--r-- 1 user user 2048 Dec 14 14:22 <span class="filename">Rivals.md</span></a>
+                        </div>
+                        <div class="file">
+                            <a href="#" onclick="showPost('post3')" class="file-link">-rw-r--r-- 1 user user 1536 Dec 13 09:15 <span class="filename">Dead Rails.md</span></a>
+                        </div>
+                        <div class="file">
+                            <a href="#" onclick="showPost('post4')" class="file-link">-rw-r--r-- 1 user user 892 Dec 12 16:45 <span class="filename">Do Big Studios.md</span></a>
+                            <div>
+                            <p>-rw-r--r-- 1 user user 425 Dec 12 2:45 Type "Help" To See The List Of Commands</p>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+
+                <div class="prompt">
+                    <span class="user">guest@BloxyTerminal</span><span class="separator">:</span><span class="path">~</span><span class="dollar">$</span> 
+                    <input type="text" id="commandInput" class="command-input" placeholder="Type a command..." autocomplete="off">
+                </div>
+            </div>
+
+            <!-- Post 1 -->
+            <div id="post1" class="section post-section">
+                <div class="prompt">
+                    <span class="user">guest@BloxyTerminal</span><span class="separator">:</span><span class="path">~</span><span class="dollar">$</span> cat posts/Grow A Garden.md
+                </div>
+                <div class="output">
+                    <h1>Grow A Garden</h1>
+                    <p>Testing</p>
+
+                    <h2>The Rise</h2>
+                    <p>Test</p>
+                    <ul>
+                        <li>List</li>
+                        <li>List</li>
+                        <li>List</li>
+                        <li>List</li>
+                    </ul>
+
+                    <h2>Jandel</h2>
+                    <p>Test</p>
+                    <ul>
+                        <li>List</li>
+                        <li>List</li>
+                        <li>List</li>
+                        <li>List</li>
+                    </ul>
+
+                    <p>Test</p>
+                </div>
+                <div class="prompt">
+                    <span class="user">guest@BloxyTerminal</span><span class="separator">:</span><span class="path">~</span><span class="dollar">$</span> <a href="#" onclick="showMain()" class="back-link">cd ..</a>
+                </div>
+            </div>
+
+            <!-- Post 2 -->
+            <div id="post2" class="section post-section">
+                <div class="prompt">
+                    <span class="user">guest@BloxyTerminal</span><span class="separator">:</span><span class="path">~</span><span class="dollar">$</span> cat posts/Rivals.md
+                </div>
+                <div class="output">
+                    <h1>Rivals</h1>
+                    <p>Test</p>
+
+                    <h2>Test</h2>
+                    <p>Test</p>
+                    <ul>
+                        <li>List</li>
+                        <li>List</li>
+                        <li>Listl</li>
+                        <li>List</li>
+                    </ul>
+
+                    <h2>Test</h2>
+                    <p>Test</p>
+                    <ul>
+                        <li>List</li>
+                        <li>List</li>
+                        <li>Listl</li>
+                        <li>List</li>
+                    </ul>
+
+                    <h2>Test</h2>
+                    <p>Test</p>
+                </div>
+                <div class="prompt">
+                    <span class="user">guest@BloxyTerminal</span><span class="separator">:</span><span class="path">~</span><span class="dollar">$</span> <a href="#" onclick="showMain()" class="back-link">cd ..</a>
+                </div>
+            </div>
+
+            <!-- Post 3 -->
+            <div id="post3" class="section post-section">
+                <div class="prompt">
+                    <span class="user">guest@BloxyTerminal</span><span class="separator">:</span><span class="path">~</span><span class="dollar">$</span> cat posts/Dead Rails.md
+                </div>
+                <div class="output">
+                    <h1>Test</h1>
+                    <p>Test</p>
+
+                    <h2>TTest</h2>
+                    <p>Test</p>
+                    <ul>
+                        <li>List</li>
+                        <li>List</li>
+                        <li>Listl</li>
+                        <li>List</li>
+                    </ul>
+
+                    <h2>Test</h2>
+                    <p>Test</p>
+                    <ul>
+                        <li>List</li>
+                        <li>List</li>
+                        <li>Listl</li>
+                        <li>List</li>
+                    </ul>
+
+                    <h2>Test</h2>
+                    <p>Test</p>
+                    <ul>
+                        <li>List</li>
+                        <li>List</li>
+                        <li>Listl</li>
+                        <li>List</li>
+                    </ul>
+
+                    <h2>Test</h2>
+                    <p>Test</p>
+                </div>
+                <div class="prompt">
+                    <span class="user">guest@BloxyTerminal</span><span class="separator">:</span><span class="path">~</span><span class="dollar">$</span> <a href="#" onclick="showMain()" class="back-link">cd ..</a>
+                </div>
+            </div>
+
+            <!-- Post 4 -->
+            <div id="post4" class="section post-section">
+                <div class="prompt">
+                    <span class="user">guest@BloxyTerminal</span><span class="separator">:</span><span class="path">~</span><span class="dollar">$</span> cat posts/Do Big Studios.md
+                </div>
+                <div class="output">
+                    <h1>Test</h1>
+                    <p>Test</p>
+
+                    <h2>TTest</h2>
+                    <p>Test</p>
+                    <ul>
+                        <li>List</li>
+                        <li>List</li>
+                        <li>Listl</li>
+                        <li>List</li>
+                    </ul>
+
+                    <h2>Test</h2>
+                    <p>Test</p>
+                    <ul>
+                        <li>List</li>
+                        <li>List</li>
+                        <li>Listl</li>
+                        <li>List</li>
+                    </ul>
+
+                    <h2>Test</h2>
+                    <p>Test</p>
+                    <ul>
+                        <li>List</li>
+                        <li>List</li>
+                        <li>Listl</li>
+                        <li>List</li>
+                    </ul>
+
+                    <h2>Test</h2>
+                    <p>Test</p>
+                </div>
+                <div class="prompt">
+                    <span class="user">guest@BloxyTerminal</span><span class="separator">:</span><span class="path">~</span><span class="dollar">$</span> <a href="#" onclick="showMain()" class="back-link">cd ..</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
